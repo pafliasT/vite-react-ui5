@@ -1,0 +1,5 @@
+/* src/styles.css */
+@import "tailwindcss";
+
+:root { color-scheme: light dark; }
+body { margin: 0; font-family: var(--sapFontFamily, system-ui, sans-serif); }

@@ -1,0 +1,19 @@
+[
+    { "OrderID": 100001, "CustomerName": "Coca-Cola Athens",           "Status": "Open",        "GrossAmount": 1234.56, "Currency": "EUR", "CreatedAt": "2025-09-01T10:15:00Z" },
+    { "OrderID": 100002, "CustomerName": "Coca-Cola Thessaloniki",     "Status": "InProgress",  "GrossAmount": 890.10,  "Currency": "EUR", "CreatedAt": "2025-09-05T08:30:00Z" },
+    { "OrderID": 100003, "CustomerName": "Coca-Cola Patras",           "Status": "Closed",      "GrossAmount": 2150.00, "Currency": "EUR", "CreatedAt": "2025-08-28T12:05:00Z" },
+    { "OrderID": 100004, "CustomerName": "PepsiCo Athens",             "Status": "Open",        "GrossAmount": 640.75,  "Currency": "EUR", "CreatedAt": "2025-09-03T09:40:00Z" },
+    { "OrderID": 100005, "CustomerName": "PepsiCo Thessaloniki",       "Status": "Closed",      "GrossAmount": 1785.20, "Currency": "EUR", "CreatedAt": "2025-09-06T14:10:00Z" },
+    { "OrderID": 100006, "CustomerName": "Loux Patras",                "Status": "InProgress",  "GrossAmount": 320.99,  "Currency": "EUR", "CreatedAt": "2025-09-07T07:55:00Z" },
+    { "OrderID": 100007, "CustomerName": "Vikos Ioannina",             "Status": "Open",        "GrossAmount": 980.30,  "Currency": "EUR", "CreatedAt": "2025-09-09T11:20:00Z" },
+    { "OrderID": 100008, "CustomerName": "Athenian Brewery Heraklion", "Status": "Closed",      "GrossAmount": 2450.00, "Currency": "EUR", "CreatedAt": "2025-09-10T16:25:00Z" },
+    { "OrderID": 100009, "CustomerName": "Red Bull Rhodes",            "Status": "InProgress",  "GrossAmount": 1199.95, "Currency": "EUR", "CreatedAt": "2025-09-12T10:00:00Z" },
+    { "OrderID": 100010, "CustomerName": "Monster Energy Chania",      "Status": "Open",        "GrossAmount": 742.80,  "Currency": "EUR", "CreatedAt": "2025-09-13T13:35:00Z" },
+    { "OrderID": 100011, "CustomerName": "Nestlé Waters Larissa",      "Status": "Closed",      "GrossAmount": 1287.00, "Currency": "EUR", "CreatedAt": "2025-08-31T15:15:00Z" },
+    { "OrderID": 100012, "CustomerName": "Coca-Cola Piraeus",          "Status": "InProgress",  "GrossAmount": 563.49,  "Currency": "EUR", "CreatedAt": "2025-09-14T09:42:00Z" },
+    { "OrderID": 100013, "CustomerName": "PepsiCo Volos",              "Status": "Closed",      "GrossAmount": 305.40,  "Currency": "EUR", "CreatedAt": "2025-09-15T08:05:00Z" },
+    { "OrderID": 100014, "CustomerName": "Loux Kalamata",              "Status": "Open",        "GrossAmount": 189.00,  "Currency": "EUR", "CreatedAt": "2025-09-17T17:30:00Z" },
+    { "OrderID": 100015, "CustomerName": "Vikos Alexandroupoli",       "Status": "InProgress",  "GrossAmount": 2145.75, "Currency": "EUR", "CreatedAt": "2025-09-19T10:50:00Z" },
+    { "OrderID": 100016, "CustomerName": "Athenian Brewery Mykonos",   "Status": "Closed",      "GrossAmount": 5120.00, "Currency": "EUR", "CreatedAt": "2025-09-22T18:10:00Z" }
+  ]
+  
