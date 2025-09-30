@@ -1,5 +1,14 @@
-/* src/styles.css */
+/* Tailwind v4 entry */
 @import "tailwindcss";
 
-:root { color-scheme: light dark; }
-body { margin: 0; font-family: var(--sapFontFamily, system-ui, sans-serif); }
+/* ❌ remove the light dark hint
+:root { color-scheme: light dark; } */
+
+/* ✅ force the page to follow UI5 theme colors */
+html, body, #root {
+  height: 100%;
+  background: var(--sapBackgroundColor);
+  color: var(--sapTextColor);
+  margin: 0;
+  font-family: var(--sapFontFamily, system-ui, sans-serif);
+}

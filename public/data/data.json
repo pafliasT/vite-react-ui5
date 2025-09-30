@@ -1,0 +1,30 @@
+{
+  "orders": [
+    { "OrderID": 100001, "CustomerName": "Coca-Cola Athens", "Status": "Open", "GrossAmount": 1234.56, "Currency": "EUR", "CreatedAt": "2025-09-01T10:15:00Z" },
+    { "OrderID": 100002, "CustomerName": "Coca-Cola Thessaloniki", "Status": "InProgress", "GrossAmount": 890.10, "Currency": "EUR", "CreatedAt": "2025-09-05T08:30:00Z" },
+    { "OrderID": 100003, "CustomerName": "Coca-Cola Patras", "Status": "Closed", "GrossAmount": 2150.00, "Currency": "EUR", "CreatedAt": "2025-08-28T12:05:00Z" },
+    { "OrderID": 100004, "CustomerName": "PepsiCo Athens", "Status": "Open", "GrossAmount": 640.75, "Currency": "EUR", "CreatedAt": "2025-09-03T09:40:00Z" },
+    { "OrderID": 100005, "CustomerName": "PepsiCo Thessaloniki", "Status": "Closed", "GrossAmount": 1785.20, "Currency": "EUR", "CreatedAt": "2025-09-06T14:10:00Z" },
+    { "OrderID": 100006, "CustomerName": "Loux Patras", "Status": "InProgress", "GrossAmount": 320.99, "Currency": "EUR", "CreatedAt": "2025-09-07T07:55:00Z" },
+    { "OrderID": 100007, "CustomerName": "Vikos Ioannina", "Status": "Open", "GrossAmount": 980.30, "Currency": "EUR", "CreatedAt": "2025-09-09T11:20:00Z" },
+    { "OrderID": 100008, "CustomerName": "Athenian Brewery Heraklion", "Status": "Closed", "GrossAmount": 2450.00, "Currency": "EUR", "CreatedAt": "2025-09-10T16:25:00Z" },
+    { "OrderID": 100009, "CustomerName": "Red Bull Rhodes", "Status": "InProgress", "GrossAmount": 1199.95, "Currency": "EUR", "CreatedAt": "2025-09-12T10:00:00Z" },
+    { "OrderID": 100010, "CustomerName": "Monster Energy Chania", "Status": "Open", "GrossAmount": 742.80, "Currency": "EUR", "CreatedAt": "2025-09-13T13:35:00Z" }
+  ],
+  "orderItems": [
+    { "OrderID": 100004, "SKU": "CC-330", "Name": "Pepsi 330ml Can (24x)", "Qty": 8, "UnitPrice": 4.20, "UoM": "Case" },
+    { "OrderID": 100004, "SKU": "CC-500", "Name": "Pepsi 500ml PET (12x)", "Qty": 6, "UnitPrice": 5.10, "UoM": "Pack" },
+    { "OrderID": 100004, "SKU": "7UP-330", "Name": "7UP 330ml Can (24x)", "Qty": 3, "UnitPrice": 4.00, "UoM": "Case" },
+
+    { "OrderID": 100001, "SKU": "COKE-330", "Name": "Coke 330ml Can (24x)", "Qty": 10, "UnitPrice": 4.50, "UoM": "Case" },
+    { "OrderID": 100001, "SKU": "COKE-ZERO-500", "Name": "Coke Zero 500ml PET (12x)", "Qty": 5, "UnitPrice": 5.60, "UoM": "Pack" },
+
+    { "OrderID": 100008, "SKU": "ALFA-500", "Name": "Alfa Beer 500ml (24x)", "Qty": 2, "UnitPrice": 18.0, "UoM": "Case" }
+  ],
+  "deliveries": [
+    { "DeliveryID": "D-90001", "OrderID": 100004, "PlannedDate": "2025-09-04T06:30:00Z", "ActualDate": "2025-09-04T07:15:00Z", "Status": "Delivered", "Carrier": "ACS", "TrackingNo": "ACS1234567" },
+    { "DeliveryID": "D-90002", "OrderID": 100004, "PlannedDate": "2025-09-06T06:30:00Z", "ActualDate": null, "Status": "Planned", "Carrier": "GENIKI", "TrackingNo": "GNK778899" },
+
+    { "DeliveryID": "D-91001", "OrderID": 100001, "PlannedDate": "2025-09-02T06:00:00Z", "ActualDate": "2025-09-02T06:05:00Z", "Status": "Delivered", "Carrier": "DHL", "TrackingNo": "DHL000111" }
+  ]
+}

@@ -1,25 +1,33 @@
 // src/pages/OrdersPage.tsx
+// deprecated, see DashboardPage
+// kept for reference
+// still exported in App.tsx
+
 import { useNavigate } from "react-router-dom";
 import { List, ListItemStandard, Text } from "@ui5/webcomponents-react";
-import { useOrders, type Order } from "../hooks/useOrders";
+import { useData, type Order } from "../hooks/useData";
 
 const statusIcon = (s: Order["Status"]) =>
   s === "Open" ? "process" : s === "InProgress" ? "refresh" : "accept";
 
-// map status to value-state string
 const amountState = (
-  s: Order['Status']
-): 'Positive' | 'Critical' | 'Information' | 'Negative' | 'None' => {
+  s: Order["Status"]
+): "Positive" | "Critical" | "Information" | "Negative" | "None" => {
   switch (s) {
-    case 'Open':        return 'Critical'      // (yellow)
-    case 'InProgress':  return 'Information'   // (blue)
-    case 'Closed':      return 'Positive'      // (green)
-    default:            return 'None'
+    case "Open":
+      return "Critical";
+    case "InProgress":
+      return "Information";
+    case "Closed":
+      return "Positive";
+    default:
+      return "None";
   }
-}
+};
+
 export default function OrdersPage() {
   const nav = useNavigate();
-  const { orders, loading, error } = useOrders();
+  const { orders, loading, error } = useData();
 
   if (loading) return <Text>Loading…</Text>;
   if (error) return <Text>⚠ {error}</Text>;
@@ -39,12 +47,12 @@ export default function OrdersPage() {
             data-id={o.OrderID}
             type="Active"
             icon={statusIcon(o.Status)}
-            description={`${o.CustomerName} • ${o.Status}`} // <-- string only
+            description={`${o.CustomerName} • ${o.Status}`}
             additionalText={new Intl.NumberFormat("el-GR", {
               style: "currency",
               currency: o.Currency,
             }).format(o.GrossAmount)}
-            additionalTextState={amountState(o.Status)} // <-- strings OK
+            additionalTextState={amountState(o.Status)}
           >
             {o.OrderID}
           </ListItemStandard>
