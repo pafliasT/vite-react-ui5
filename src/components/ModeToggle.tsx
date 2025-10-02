@@ -1,34 +1,39 @@
 // src/components/ModeToggle.tsx
 import { SegmentedButton, SegmentedButtonItem } from "@ui5/webcomponents-react";
-
-// optional but safe: ensure WCs are registered so events fire
+// (optional) ensure WCs are registered
 import "@ui5/webcomponents/dist/SegmentedButton.js";
 import "@ui5/webcomponents/dist/SegmentedButtonItem.js";
 
 type Mode = "orders" | "deliveries";
 
+// Event detail can be either single selectedItem or an array selectedItems
+type SegmentedChangeDetail = {
+  selectedItem?: HTMLElement
+  selectedItems?: HTMLElement[]
+}
+
 export default function ModeToggle({
   value,
   onChange,
 }: {
-  value: Mode;
+  value: Mode
   onChange: (v: Mode) => void;
 }) {
   return (
     <SegmentedButton
-      onSelectionChange={(e: any) => {
-        // support both wrapper + native event shapes
-        const item = e.detail?.selectedItem ?? e.detail?.selectedItems?.[0];
-        if (!item) return;
-        onChange(item.id === "ordersBtn" ? "orders" : "deliveries");
+      onSelectionChange={(e: CustomEvent<SegmentedChangeDetail>) => {
+        const item =
+          e.detail?.selectedItem ??
+          e.detail?.selectedItems?.[0] ??
+          undefined
+        if (!item) return
+        onChange(item.id === "ordersBtn" ? "orders" : "deliveries")
       }}
     >
-      {/* works at runtime , ts bitching */}
-      {/* @ts-ignore */}
       <SegmentedButtonItem id="ordersBtn" selected={value === "orders"}>
         Orders
       </SegmentedButtonItem>
-      {/* @ts-ignore */}
+
       <SegmentedButtonItem id="deliveriesBtn" selected={value === "deliveries"}>
         Deliveries
       </SegmentedButtonItem>

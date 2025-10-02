@@ -6,6 +6,7 @@
 import { useNavigate } from "react-router-dom";
 import { List, ListItemStandard, Text } from "@ui5/webcomponents-react";
 import { useData, type Order } from "../hooks/useData";
+type ListItemClickDetail = { item: HTMLElement }
 
 const statusIcon = (s: Order["Status"]) =>
   s === "Open" ? "process" : s === "InProgress" ? "refresh" : "accept";
@@ -32,7 +33,7 @@ export default function OrdersPage() {
   if (loading) return <Text>Loading…</Text>;
   if (error) return <Text>⚠ {error}</Text>;
 
-  const onItemClick = (e: any) => {
+  const onItemClick = (e: CustomEvent<ListItemClickDetail>) => {
     const li = e.detail.item as HTMLElement;
     const id = Number(li.dataset.id);
     if (id) nav(`/orders/${id}`);

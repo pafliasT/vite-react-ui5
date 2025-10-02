@@ -15,6 +15,8 @@ type Delivery = {
   TrackingNo: string;
 };
 
+type ListItemClickDetail = { item: HTMLElement }
+
 export default function DeliveriesCard({
   deliveries,
   onOpenOrder,
@@ -34,7 +36,7 @@ export default function DeliveriesCard({
       <div className="p-2">
         <List
           separators="Inner"
-          onItemClick={(e: any) => {
+          onItemClick={(e: CustomEvent<ListItemClickDetail>) => {
             if (!onOpenOrder) return;
             const el = e.detail.item as HTMLElement;
             const m = (el.textContent || "").match(/Order #(\d+)/);

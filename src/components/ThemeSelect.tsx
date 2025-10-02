@@ -12,6 +12,8 @@ import "@ui5/webcomponents/dist/Select.js";
 import "@ui5/webcomponents/dist/Option.js";
 import { setTheme } from "@ui5/webcomponents-base/dist/config/Theme.js";
 
+type SelectChangeEventDetail = { selectedOption: HTMLElement }
+
 const THEMES = [
   { value: "sap_horizon", label: "Horizon (Light)" },
   { value: "sap_horizon_dark", label: "Horizon (Dark)" },
@@ -50,7 +52,7 @@ export default function ThemeSelect() {
       <Label>Theme</Label>
       <Select
         style={{ width: 260 }}
-        onChange={(e: any) => {
+        onChange={(e: CustomEvent<SelectChangeEventDetail>) => {
           const opt = e.detail.selectedOption as HTMLElement;
           setThemeState(opt.getAttribute("data-value") || THEMES[0].value);
         }}
@@ -59,7 +61,7 @@ export default function ThemeSelect() {
           <Option
             key={t.value}
             data-value={t.value}
-            /* @ts-ignore */ selected={idx === selectedIndex}
+            selected={idx === selectedIndex}
           >
             {t.label}
           </Option>

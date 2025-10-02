@@ -13,6 +13,7 @@ type Order = {
   Currency: string;
   CreatedAt: string;
 };
+type ListItemClickDetail = { item: HTMLElement }
 
 export default function OrdersCard({
   orders,
@@ -41,7 +42,7 @@ export default function OrdersCard({
       <div className="p-2">
         <List
           separators="Inner"
-          onItemClick={(e: any) => {
+          onItemClick={(e: CustomEvent<ListItemClickDetail>) => {
             const id = Number((e.detail.item as HTMLElement).dataset.id);
             if (id) onOpenOrder(id);
           }}

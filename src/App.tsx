@@ -9,7 +9,11 @@ import ThemeSelect from "./components/ThemeSelect";
 export default function App() {
   return (
     <>
-      <ShellBar primaryTitle="Coke Orders"></ShellBar>
+      <ShellBar
+        primaryTitle="Coke Orders"
+        logo={<img src="/coke.svg" alt="" style={{ height: '32px' }} />}
+      />
+
       <ThemeSelect />
 
       <div className="p-4">
